@@ -1,0 +1,53 @@
+<form action="" class="was-validated">
+<div class="conta form-group">
+	<h1 class="text-danger">Contact Me</h1>
+
+	<label for="fullname">Full name *</label>
+		<input type="text" class="form-control" name="fullname" id="fullname" placeholder="Your first name"required>
+
+	<label for="email">Email</label>
+		<input type="text" class="form-control" name="email" id="email" placeholder="Your E-mail">
+
+	<label for="pays">Country </label>
+		<input type="text" class="form-control" name="pays" id="pays" placeholder="Your country">
+
+	<label for="msg">Subject *</label>
+	<textarea name="subject" class="form-control" placeholder="Write something.." rows="4" required id="msg"></textarea>
+
+   <div class="resSend mt-2"></div>
+   <input type="button"class="btn btn-outline-success mt-2 w-100" name="send" id="send" value="send">
+
+</div>
+</form>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#send").click(function(){
+ if($(".conta .form-control").isValid()){
+ 	let fullname = $("#fullname").val();
+ 	let email = $("#email").val();
+ 	let country = $("#country").val();
+ 	let msg = $("textarea#msg").val();
+  $.ajax({
+   url:"pages/send.php",
+   method:"post",
+   data:{
+   	fullname:fullname,
+   	email:email,
+   	country:country,
+   	msg:msg
+   },
+  success:function(res){
+     $(".resSend").html(res);
+  },
+  error:function(xhr,type,err){
+     $(".resSend").html(type+':'+err);
+  },
+   beforeSend:function(){
+     $(".resSend").html('<img src="images/charg9.gif" style="height:40px;width:40px;margin-left:43%;">');
+   }
+});
+}
+});
+
+});
+</script>

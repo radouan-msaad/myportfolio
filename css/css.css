@@ -1,0 +1,45 @@
+.bd{
+    background-color: #FB0E24;
+}
+.container{
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #5B5959;
+    background-color: #161515;
+    color: white;
+}
+.lio{
+    color: red;
+}
+.skl{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+}
+.navbar a{
+    margin-right:18%;
+    color: white;
+}
+.collapse a{
+    margin: 0 20px;
+}
+.collapse a:hover{
+    color: red;
+}
+.portfolio:hover{
+    color: aqua;
+}
+.body{
+    margin-top: 5vh;
+}
+.pic{
+    padding:10px 10px;
+    height: 50vh;
+    max-width: 100%;
+}
+.site{
+     padding: 5px;
+}
+footer div{
+    font-size: 14px;
+    padding: 10px;
+}

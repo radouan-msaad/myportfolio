@@ -1,0 +1,55 @@
+<h1 class="text-danger">My Skills</h1>
+
+<div class="skls mt-2">
+<div class="skl php row"><div class="col-4">PHP:</div><div class="col"><div class="progress">
+  <div class="progress-bar  bg-danger"></div>
+</div></div></div>
+<div class="skl mysql row"><div class="col-4">MYSQL:</div><div class="col"><div class="progress">
+  <div class="progress-bar  bg-primary"></div>
+</div></div></div>
+<div class="skl js row"><div class="col-4">JS:</div><div class="col"><div class="progress">
+  <div class="progress-bar  bg-info"></div>
+</div></div></div>
+<div class="skl html row"><div class="col-4">HTML:</div><div class="col"><div class="progress">
+  <div class="progress-bar  bg-success"></div>
+</div></div></div>
+<div class="skl css row"><div class="col-4">CSS:</div><div class="col"><div class="progress">
+  <div class="progress-bar  bg-warning"></div>
+</div></div></div>
+<div class="skl jquery row"><div class="col-4">JQUERY:</div><div class="col"><div class="progress">
+  <div class="progress-bar  bg-primary"></div>
+</div></div></div>
+<div class="skl bootstrap row"><div class="col-4">BOOTSTRAP:</div><div class="col"><div class="progress">
+  <div class="progress-bar  bg-secondary"></div>
+</div></div></div>
+
+</div>
+<script type="text/javascript">
+ $(document).ready(function(){
+	 var el1 = document.querySelector('.php .progress-bar');
+      anime(el1,75);
+	 var el2 = document.querySelector('.mysql .progress-bar');
+      anime(el2,85);
+	 var el3 = document.querySelector('.js .progress-bar');
+      anime(el3,90);
+	 var el4 = document.querySelector('.html .progress-bar');
+      anime(el4,95);
+	 var el5 = document.querySelector('.css .progress-bar');
+      anime(el5,85);
+	 var el6 = document.querySelector('.jquery .progress-bar');
+      anime(el6,80);
+	 var el7 = document.querySelector('.bootstrap .progress-bar');
+      anime(el7,70);
+	});
+ function anime(elm,width){
+  var el = elm;
+ 	 var wd = 0;
+ 	 setInterval(function(){
+    if(wd<width){
+ 	  wd++;
+ 	  el.innerHTML = wd+'%';
+ 	  el.style.width = wd+'%';
+   }
+ 	 },(70-width/2));
+ }
+</script>
