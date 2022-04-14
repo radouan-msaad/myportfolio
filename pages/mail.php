@@ -9,7 +9,7 @@ require '../PHPMailer/Exception.php';
 $mail = new PHPMailer(true);
    try {
     //Server settings
-    $mail->SMTPDebug = 1;                      
+    $mail->SMTPDebug = 0;                      
     $mail->isSMTP(true);                       
     $mail->Host       = 'smtp.gmail.com';                     
     $mail->SMTPAuth   = true;                                   
