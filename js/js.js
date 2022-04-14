@@ -8,7 +8,7 @@ function ajax(url){
      $(".info").html(type+':'+err);
   },
    beforeSend:function(){
-     $(".info").html('<img src="images/charg9.gif" style="height:100px;width:100px;margin-left:43%;">');
+     $(".info").html('<img src="images/charg9.gif" style="height:100px;width:100px;margin-left:30%;">');
    }
 });
 }
